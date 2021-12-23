@@ -1,0 +1,164 @@
+.header-container {
+    background-color: $brand-navy;
+
+    .navbar {
+        @include container;
+        @include space(p,h,2);
+        @include space(p,w,2.5);
+
+        @include for-tablet-desktop {
+            @include space(p,h,1.5);
+            @include space(p,w,5.875);
+        }
+
+        &-brand img {
+            max-width: 183px;
+
+            @include for-tablet-desktop {
+                max-width: initial;
+            }
+        }
+
+        &-links {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            @include for-desktop {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .navbar-top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                @include for-desktop {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    width: auto;
+                }
+    
+                .sign-up {
+                    letter-spacing: 0.02em;
+                    color: $neutral-white;
+                    border: 1px solid $neutral-white;
+                    border-radius: 100px;
+                    @include space(p,h,0.5);
+                    @include space(m,t,1.5);
+                    text-align: center;
+                    width: 100%;
+                    max-width: 300px;
+
+                    @include for-desktop {
+                        @include space(p,w,1.5);
+                        @include space(m,l,2.5);
+                        @include space(m,t,0);
+                    }
+
+                    &:hover {
+                        background-color: $brand-yellow;
+                        color: $neutral-black;
+                    }
+                }
+                .login {
+                    font-weight: weight(medium);
+                    color: $brand-yellow;
+                    @include space(m,t,2);
+                    letter-spacing: 0.02em;
+
+                    @include for-desktop {
+                        @include space(m,l,2);
+                        @include space(m,t,0);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+    
+            .form-inline {
+                position: relative;
+
+                &.desktop {
+                    display: none;
+
+                    @include for-desktop {
+                        display: block;
+                    }
+                }
+
+                &.mobile {
+                    @include space(m,t,1.5);
+
+                    @include for-desktop {
+                        display: none;
+                    }
+                }
+
+                input {
+                    background: rgba(0, 0, 0, 0.15);
+                    border: none;
+                    border-radius: 100px;
+                    color: $neutral-white;
+                    @include space(p,l,1.5);
+                    @include space(p,r,2.5);
+                    @include space(p,h,0.75);
+
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 14px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+    
+            .navbar-nav {
+                border-bottom: 1px solid $neutral-white;
+                justify-content: flex-end;
+                align-items: center;
+                @include space(m,t,1.5);
+                width: 100%;
+
+                @include for-desktop {
+                    border: none;
+                }
+    
+                .nav-item {
+                    @include space(m,h,0.5);
+
+                    @include for-desktop {
+                        @include space(m,l,4);
+                    }
+    
+                    a {
+                        font-size: $font-size-XIV;
+                        font-weight: weight(medium);
+                        @include space(p,h,0.75);
+                        @include space(p,w,0);
+                        color: $neutral-white;
+                        border-bottom: 2px solid transparent;
+                        opacity: 0.8;
+                        letter-spacing: 0.04em;
+    
+                        &:hover {
+                            border-color: $brand-yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

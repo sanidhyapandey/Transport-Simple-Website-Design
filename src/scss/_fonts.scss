@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/NotoSans-Italic.eot');
+    src: url('../fonts/NotoSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-Italic.woff2') format('woff2'),
+        url('../fonts/NotoSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/NotoSans-BoldItalic.eot');
+    src: url('../fonts/NotoSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-BoldItalic.woff2') format('woff2'),
+        url('../fonts/NotoSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/NotoSans-Bold.eot');
+    src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+        url('../fonts/NotoSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/NotoSans.eot');
+    src: url('../fonts/NotoSans.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans.woff2') format('woff2'),
+        url('../fonts/NotoSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Bungee';
+    src: url('../fonts/Bungee-Regular.eot');
+    src: url('../fonts/Bungee-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bungee-Regular.woff2') format('woff2'),
+        url('../fonts/Bungee-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }

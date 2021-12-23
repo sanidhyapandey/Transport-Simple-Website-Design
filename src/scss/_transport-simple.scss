@@ -1,0 +1,516 @@
+.header {
+  background-color: #595fab;
+  &__main-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo-wrapper {
+    background-color: #fefefe;
+    @include space(m, l, 2.25);
+    @include space(m, t, 0.75);
+    @include space(m, b, 1);
+    img {
+      @include space(m, w, 0.8125);
+    }
+  }
+  &__search-wrapper {
+    display: flex;
+    margin-top: 0.625rem;
+  }
+  &__dropdown-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px 0 0 3px;
+    background-color: #f1f4f9;
+    width: 10rem;
+    height: 2.5rem;
+    &--text {
+      font-size: 14px;
+      line-height: 19px;
+
+      p {
+        @include space(m, t, 0.75);
+        @include space(m, b, 0);
+        @include space(m, l, 0.625);
+        font-family: "Noto Sans";
+      }
+    }
+    &--icon {
+      img {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  &__search-tab-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__search-placeholder {
+    input {
+      width: 500px;
+      height: 2.5rem;
+      border-radius: 0 3px 3px 0;
+      background-color: #fff;
+      border: none;
+      &::placeholder {
+        opacity: 0.5;
+        color: #5a6b7b;
+        font-family: "Noto Sans";
+        font-size: 14px;
+        line-height: 19px;
+        @include space(p, l, 1);
+      }
+    }
+  }
+  &__search-icon {
+    position: absolute;
+    left: 1042px;
+    top: 1rem;
+  }
+  &__notif-icon {
+    @include space(m, r, 2.125);
+  }
+  &__header-right {
+    @include space(m, t, 0.625);
+    @include space(m, r, 2);
+  }
+  &__simple-text {
+    color: #fff;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    line-height: 19px;
+    @include space(m, w, 1);
+  }
+}
+
+//NAVBAR MAIN
+
+.navbar-main {
+  background-color: #fefefe;
+  border: 1px solid #d8e1e9;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  ul {
+    display: flex;
+    padding-left: 2.5rem;
+    margin-bottom: 0;
+    @include space(p, h, 0.3125);
+  }
+  a {
+    color: #5a6b7b;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 40px;
+    @include space(m, l, 0.625);
+    @include space(m, r, 4);
+  }
+  &__last-link {
+    margin-right: 1.25rem !important;
+  }
+}
+
+//Summary
+
+.summary {
+  background-color: #f1f4f9;
+  .summary-container {
+    @include space(p, w, 2);
+    .date-placeholder {
+      width: 300px;
+      height: 40px;
+      @include space(p, l, 0.625);
+      @include space(m, t, 1);
+      @include space(m, b, 1.25);
+    }
+  }
+  &__heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      opacity: 0.9;
+      color: #34393e;
+      font-family: Arial;
+      font-size: 26px;
+      line-height: 34px;
+      @include space(m, t, 1.25);
+    }
+  }
+}
+
+.account-details {
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+  @include space(m, b, 1.875);
+  &__wrapper {
+    @include space(p, a, 1.25);
+  }
+  &__row1 {
+    display: flex;
+    a {
+      border-radius: 13px;
+      background-color: #07c060;
+      border: 1px solid #07c060;
+      text-decoration: none;
+      font-family: "Noto Sans";
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 17px;
+      text-align: right;
+      @include space(p, h, 0.25);
+      @include space(p, w, 2.25);
+      color: #fff;
+      height: 1.75rem;
+      margin-left: 480px;
+    }
+  }
+  &__para {
+    margin-left: 380px;
+  }
+  &__para1 {
+    margin-left: 405px;
+  }
+  .bank {
+    @include space(m, b, 0);
+  }
+}
+
+//cards
+
+.balance-cards {
+  &__main-wrapper {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.875rem;
+  }
+  &__card1 {
+    flex-basis: 32.7%;
+    border-radius: 3px;
+    background-color: #8190ff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    @include space(p, h, 0.875);
+    @include space(p, l, 2.25);
+    @include space(p, r, 2);
+    &--description {
+      float: left;
+      h5 {
+        color: #fff;
+        font-family: "Noto Sans";
+        font-size: 13px;
+        line-height: 17px;
+      }
+      h3 {
+        color: #fff;
+        font-family: "Noto Sans";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+    }
+    &--icon {
+      float: right;
+      @include space(m, t, 0.625);
+    }
+  }
+  &__card2-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-flex1 {
+    flex-basis: 50%;
+    border-right: 1px solid #fff;
+    padding-left: 2.5rem;
+  }
+  .card-flex2 {
+    flex-basis: 50%;
+    padding-left: 2.5rem;
+  }
+
+  &__card2 {
+    flex-basis: 32.7%;
+    border-radius: 3px;
+    background-color: #ff5f83;
+    @include space(p, h, 0.875);
+    @include space(m, w, 0.75);
+  }
+  .card2-icons {
+    margin-right: 1.875rem;
+  }
+  .card3bg {
+    background-color: #ff9056;
+  }
+}
+
+//Cash Sumamry
+
+.cash-summary {
+  .row1-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &__main-wrapper {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    border-radius: 3px;
+    background-color: #fefefe;
+    border: 1px solid #d8e1e9;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    h3 {
+      color: #34393e;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+    }
+  }
+  .months {
+    display: flex;
+  }
+  .months-bg {
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #bcc7d1;
+    width: 146px;
+  }
+  .months-bg1 {
+    margin-left: 0.75rem;
+    width: 146px;
+  }
+  .values {
+    ul {
+      display: flex;
+      padding: 0;
+    }
+    li {
+      &:last-child {
+        margin-left: 4.25rem;
+      }
+    }
+    span {
+      margin-left: 5px;
+      color: #45505b;
+      font-family: "Noto Sans";
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  .summary-chart-wrapper {
+    margin-top: 30px;
+    margin-bottom: 1.25rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.transaction-section {
+  &__wrapper {
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+
+    nav {
+      display: flex;
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+      h3 {
+        color: #34393e;
+        font-family: "Noto Sans";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        margin-top: 40px;
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      display: flex;
+      margin-top: 30px;
+    }
+    li {
+      &:first-child {
+        color: #595fab;
+        border-bottom: 2px solid #595fab;
+      }
+      color: #45505b;
+      font-family: "Noto Sans";
+      font-size: 14px;
+      line-height: 40px;
+      font-weight: 700;
+      margin-left: 3rem;
+    }
+  }
+
+  .search-tab {
+    margin-left: 330px;
+    height: 34px;
+    width: 299.18px;
+    border-bottom: 1px solid #9facb8;
+    margin-top: 33px;
+  }
+  .search {
+    opacity: 0.5;
+    color: #5a6b7b;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    line-height: 19px;
+    margin-left: 12px;
+  }
+  .showing {
+    color: #45505b;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    margin-left: 45px;
+    margin-top: 41px;
+  }
+  .all {
+    height: 40px;
+    width: 59.84px;
+    margin-left: 12px;
+    margin-right: 26px;
+    margin-top: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #bcc7d1;
+  }
+  .dots {
+    margin-top: 34px;
+  }
+}
+
+.customers {
+  font-family: "Noto Sans";
+  width: 100%;
+  th {
+    @include space(p, h, 0.8125);
+    @include space(p, w, 2.25);
+    border-top: 1px solid #d8e1e9;
+    border-bottom: 1px solid #d8e1e9;
+    color: #45505b;
+    font-family: "Noto Sans";
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+  td {
+    @include space(p, w, 2.25);
+    border-top: 1px solid #d8e1e9;
+    border-bottom: 1px solid #d8e1e9;
+    @include space(p, h, 1);
+    color: #45505b;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    line-height: 19px;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: #f8f8fb;
+    }
+    img {
+      margin-left: 12px;
+    }
+  }
+  .table-options {
+    padding-left: 50px;
+  }
+  .p-r {
+    padding-right: 0;
+    width: 0;
+  }
+}
+
+.transaction-pagination {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 31px;
+  margin-bottom: 1.75rem;
+  .left {
+    border: none !important;
+  }
+  .two {
+    border-radius: 3px;
+    background-color: #595fab;
+    height: 28px;
+    width: 33.51px;
+    color: white;
+    text-align: center;
+  }
+}
+
+.bill {
+  font-family: "Noto Sans";
+  border-radius: 3px;
+  background-color: #fefefe;
+  border: 1px solid #d8e1e9;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 34px;
+  @include space(p, w, 2);
+  th {
+    border-radius: 3px 3px 0 0;
+    background-color: #f2f4f7;
+    @include space(p, h, 0.8125);
+    @include space(p, w, 2);
+    color: #45505b;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+  td {
+    @include space(p, w, 2);
+    @include space(p, h, 0.5);
+    border-bottom: 0.5px solid #c8d3de;
+    color: #45505b;
+    font-size: 14px;
+    line-height: 19px;
+    input[type="text"] {
+      width: 100px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #fff;
+      border: 1px solid #bcc7d1;
+    }
+    input[type="checkbox"] {
+      height: 20px;
+      width: 24.83px;
+      border-radius: 3px;
+      background-color: #fff;
+      border: 1px solid #9facb8;
+    }
+  }
+}
+.back-btn-wrapper {
+  @include space(m, t, 1.5);
+  @include space(p, b, 1.5);
+}
+.back-btn {
+  border-radius: 3px;
+  border: 1px solid #595fab;
+  text-decoration: none;
+  color: #595fab;
+  background-color: transparent;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  @include space(p, h, 0.625);
+  @include space(p, w, 3.75);
+}
+
+footer {
+  background-color: #fefefe;
+  p {
+    color: #5a6b7b;
+    font-family: "Noto Sans";
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 84px;
+    @include space(m,h,.75);
+  }
+}

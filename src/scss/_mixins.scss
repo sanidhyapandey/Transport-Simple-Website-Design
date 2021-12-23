@@ -1,0 +1,163 @@
+@mixin container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+@mixin boxed-container {
+    max-width: $container-boxed-width;
+    margin: 0 auto;
+}
+
+@mixin para {
+    font-size: $font-size-XVI;
+    font-weight: weight(regular);
+    line-height: $line-height-XXVIII;
+}
+
+@mixin h1 {
+    font-size: $font-size-XLVIII;
+    font-weight: weight(regular);
+    line-height: $line-height-LVI;
+    color: $brand-navy;
+}
+
+@mixin h3 {
+    font-size: $font-size-XVIII;
+    font-weight: weight(bold);
+    line-height: $line-height-XXXVI;
+    text-align: center;
+}
+
+@mixin h4 {
+    font-size: $font-size-XXIV;
+    font-weight: weight(bold);
+    line-height: $line-height-XXXII;
+}
+
+@mixin h5 {
+    font-size: $font-size-XX;
+    font-weight: weight(bold);
+    line-height: $line-height-XXVIII;
+}
+
+/*mixin for padding and margin*/
+/*The format in which one must give the spacing is for example: @include space(m, t, 5)*/
+/*
+  m = margin
+  p = padding
+  
+  a = all directions
+  w = stands for width, for applying in left and right directions
+  h = stands for height, for applying in top and bottom directions
+  t = top
+  r = right
+  b = bottom
+  l = left
+*/
+ 
+@mixin space($type, $direction, $amount) {
+ 
+    @if $type==m {
+      @if $direction==a {
+        margin: #{$amount}rem;
+      }
+   
+      @else if $direction==w {
+        margin-left: #{$amount}rem;
+        margin-right: #{$amount}rem;
+      }
+   
+      @else if $direction==h {
+        margin-top: #{$amount}rem;
+        margin-bottom: #{$amount}rem;
+      }
+   
+      @else if $direction==t {
+        margin-top: #{$amount}rem;
+      }
+   
+      @else if $direction==r {
+        margin-right: #{$amount}rem;
+      }
+   
+      @else if $direction==b {
+        margin-bottom: #{$amount}rem;
+      }
+   
+      @else if $direction==l {
+        margin-left: #{$amount}rem;
+      }
+    }
+   
+    @else if $type==p {
+      @if $direction==a {
+        padding: #{$amount}rem;
+      }
+   
+      @else if $direction==w {
+        padding-left: #{$amount}rem;
+        padding-right: #{$amount}rem;
+      }
+   
+      @else if $direction==h {
+        padding-top: #{$amount}rem;
+        padding-bottom: #{$amount}rem;
+      }
+   
+      @else if $direction==t {
+        padding-top: #{$amount}rem;
+      }
+   
+      @else if $direction==r {
+        padding-right: #{$amount}rem;
+      }
+   
+      @else if $direction==b {
+        padding-bottom: #{$amount}rem;
+      }
+   
+      @else if $direction==l {
+        padding-left: #{$amount}rem;
+      }
+    }
+}
+
+@mixin button($bg-color: white) {
+    border-radius: 100px;
+    background-color: $bg-color;
+}
+
+//Fonts 
+
+@mixin font-face-NotoSans($variant) {
+  font-family: "NotoSans#{$variant}";
+  src: url("../fonts/NotoSans-#{map-get($map: $NotoSans-font-face, $key: $variant)}.eot"), // IE 9 Compat Modes
+  url("../fonts/NotoSans-#{map-get($map: $NotoSans-font-face, $key: $variant)}.eot?#iefix") format("embedded-opentype"), // IE6-IE8
+  url("../fonts/NotoSans-#{map-get($map: $NotoSans-font-face, $key: $variant)}.woff") format("woff"), // Modern Browsers
+  url("../fonts/NotoSans-#{map-get($map: $NotoSans-font-face, $key: $variant)}.woff2") format( "woff2"); // Modern Browsers
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-face-Bungee($variant) {
+  font-family: "Bungee#{$variant}";
+  src: url("../fonts/Bungee-#{map-get($map: $Bungee-font-face, $key: $variant)}.eot");
+  src: url("../fonts/Bungee-#{map-get($map: $Bungee-font-face, $key: $variant)}.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Bungee-#{map-get($map: $Bungee-font-face, $key: $variant)}.woff2") format("woff2"),
+  url("../fonts/Bungee-#{map-get($map: $Bungee-font-face, $key: $variant)}.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//responsive breakpoint
+@mixin for-tablet-desktop {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+ 
+@mixin for-desktop {
+  @media  only screen and (min-width: 1024px){
+    @content;
+  }
+}
